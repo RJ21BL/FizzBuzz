@@ -1,13 +1,18 @@
-
-describe ("FizzBuzz", =>
-{
-let fizzBuzz
+class FizzBuzz {
+    fizz = function (number) {
+        return number % 3 === 0;
+    }
 }
-    beforeEach(function() {
-        player = new Player();
-        song = new Song();
+
+describe("FizzBuzz", function () {
+    let fizzBuzz;
+
+    beforeEach(function () {
+        fizzBuzz = new FizzBuzz();
     });
 
-    it("should be able to play a Song", function() {
-        player.play(song);
-        expect(player.currentlyPlayingSong).toEqual(song);
+    it("should be fizz if multiple of 3", function () {
+
+        expect(fizzBuzz.fizz(6)).toEqual(true);
+    });
+})
