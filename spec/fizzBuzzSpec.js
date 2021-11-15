@@ -1,8 +1,3 @@
-class FizzBuzz {
-    fizz = function (number) {
-        return number % 3 === 0;
-    }
-}
 
 describe("FizzBuzz", function () {
     let fizzBuzz;
@@ -15,4 +10,15 @@ describe("FizzBuzz", function () {
 
         expect(fizzBuzz.fizz(6)).toEqual(true);
     });
+
+    it("should be fizz if multiple of 5", function () {
+
+        expect(fizzBuzz.buzz(10)).toEqual(true);
+    });
+
+    it("should be fizz if multiple of 5", function () {
+
+        expect(fizzBuzz.fizzbuzz(15)).toEqual(true);
+    });
+
 })
