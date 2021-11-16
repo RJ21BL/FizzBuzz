@@ -6,6 +6,17 @@ class FizzBuzz {
         return number % 5 === 0;
     }
     fizzbuzz = function (number) {
-        return undefined;
+        return FizzBuzz.fizz(number) && FizzBuzz.buzz(number);
     }
+
+    static fizz(number) {
+        return number % 3 === 0;
+    }
+
+    static buzz(number) {
+        return number % 5 === 0;
+    }
+}
+module.exports = {
+    FizzBuzz: FizzBuzz,
 }
